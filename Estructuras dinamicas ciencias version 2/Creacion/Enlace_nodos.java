@@ -79,21 +79,23 @@ public class Enlace_nodos {
         }
     }
 
-    public void adicionarNodosFinal() {
-        int cantidad = aleatorio.nextInt(10) + 1; // número aleatorio entre 1 y 10
+    public int adicionarNodosFinal() {
+    int cantidad = aleatorio.nextInt(10) + 1; // número aleatorio entre 1 y 10
 
-        for (int j = 0; j < cantidad; j++) {
-            q = new Definicion();
-            q.num = ultimoValor++;
-            q.sig = null;
+    for (int j = 0; j < cantidad; j++) {
+        q = new Definicion();
+        q.num = ultimoValor++;
+        q.sig = null;
 
-            if (p == null) {
-                p = q;
-                cab = q;
-            } else {
-                cab.sig = q;
-                cab = q;
-            }
+        if (p == null) {
+            p = q;
+            cab = q;
+        } else {
+            cab.sig = q;
+            cab = q;
         }
     }
+
+    return cantidad;
+        }
 }

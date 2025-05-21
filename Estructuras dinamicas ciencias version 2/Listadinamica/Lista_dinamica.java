@@ -29,10 +29,10 @@ public class Lista_dinamica {
                     obj.impre();
                     break;
                 case 4:
-                    obj.adicionarNodosFinal();
-                    JOptionPane.showMessageDialog(null,"**** NODOS AGREGADOS AL FINAL *****");
+                    int agregados = obj.adicionarNodosFinal();
+                    JOptionPane.showMessageDialog(null, "**** SE AGREGARON " + agregados + " NODOS AL FINAL *****");
                     obj.impre();
-                    break;
+    break;
                 case 5:
                     System.exit(0);
             }
